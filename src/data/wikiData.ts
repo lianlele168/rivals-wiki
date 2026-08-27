@@ -72,28 +72,46 @@ export const GAME_INFO = {
 
 export const ACTIVE_CODES: CodeItem[] = [
   {
-    code: "100MVISITS",
-    rewards: "50 Weapon Keys, Wrap Skin Chest, 2 Hours 2x EXP Boost",
+    code: "FREE195",
+    rewards: "3x Weapon Keys",
     status: "active",
-    addedDate: "2026-08-20"
+    addedDate: "2026-08-27"
   },
   {
-    code: "COMMUNITY",
-    rewards: "25 Weapon Keys, 5,000 Coins",
+    code: "CANNONBALLLLL",
+    rewards: "5x Goodie Bags",
     status: "active",
-    addedDate: "2026-08-18"
+    addedDate: "2026-08-27"
   },
   {
-    code: "RELEASE",
-    rewards: "15 Keys, Starter Weapon Wrap",
+    code: "COMMUNITY24",
+    rewards: "1x Community Wrap (Random Weapon)",
     status: "active",
-    addedDate: "2026-08-15"
+    addedDate: "2026-08-27"
   },
   {
-    code: "FREEWRAP",
-    rewards: "Exclusive Crimson Camo Weapon Wrap",
+    code: "BONUS",
+    rewards: "1x Weapon Key",
     status: "active",
-    addedDate: "2026-08-10"
+    addedDate: "2026-08-27"
+  },
+  {
+    code: "BOOST",
+    rewards: "1x Weapon Key",
+    status: "active",
+    addedDate: "2026-08-27"
+  },
+  {
+    code: "ROBLOX_RTC",
+    rewards: "5x Weapon Keys",
+    status: "active",
+    addedDate: "2026-08-27"
+  },
+  {
+    code: "ELBILLUG",
+    rewards: "Fun Secret Item",
+    status: "active",
+    addedDate: "2026-08-27"
   }
 ];
 
