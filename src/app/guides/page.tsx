@@ -1,8 +1,29 @@
 'use client';
 
 import React, { useState } from 'react';
-import { BookOpen, Zap, Sliders, Monitor, ArrowRight, Check } from 'lucide-react';
+import Image from 'next/image';
+import { BookOpen, Zap, Sliders, Monitor, ArrowRight, Check, Crosshair, Shield, HelpCircle } from 'lucide-react';
 import { GUIDES } from '@/data/wikiData';
+import AuthorCard from '@/components/AuthorCard';
+
+const GUIDE_FAQS = [
+  {
+    question: 'What sensitivity conversion ratio translates Valorant aim to Roblox Rivals?',
+    answer: 'Multiply your Valorant sensitivity by 3.18 to achieve identical cm/360 rotational distance in Roblox Rivals at standard 90 Field of View (FOV).',
+  },
+  {
+    question: 'How do you execute the slide-cancel movement tech in Rivals?',
+    answer: 'Sprint forward, tap Crouch to initiate slide frames, and immediately tap Jump while holding forward. This preserves maximum momentum while keeping your weapon spread bloom tight.',
+  },
+  {
+    question: 'What graphics settings provide maximum FPS and target clarity?',
+    answer: 'Set Roblox Graphics Quality to 3 or 4 to disable particle foliage and bloom while retaining maximum draw distance for player silhouettes across open sightlines.',
+  },
+  {
+    question: 'How does crouch-spamming affect weapon accuracy?',
+    answer: 'Unlike tactical shooters, crouch-spamming in Rivals does not induce a persistent accuracy penalty, but it alters your headshot hitbox position drastically, throwing off enemy crosshair placement.',
+  },
+];
 
 export default function GuidesPage() {
   const [valSens, setValSens] = useState<number>(0.35);
@@ -13,35 +34,92 @@ export default function GuidesPage() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            dateModified: '2026-09-15',
+            author: {
+              '@type': 'Person',
+              name: 'Marcus "Vortex" Vance',
+              jobTitle: 'Lead FPS Frame-Data Analyst & Ranked Duelist',
+            },
+            mainEntity: GUIDE_FAQS.map((faq) => ({
+              '@type': 'Question',
+              name: faq.question,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: faq.answer,
+              },
+            })),
+          }),
+        }}
+      />
+
       {/* Header */}
       <div className="border-b border-red-900/30 pb-6">
-        <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-purple-950/80 border border-purple-800/50 text-purple-300 text-xs font-mono font-bold mb-3">
-          <BookOpen className="w-3.5 h-3.5 text-purple-400" />
+        <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-red-950/80 border border-red-800/50 text-red-400 text-xs font-mono font-bold mb-3">
+          <BookOpen className="w-3.5 h-3.5" />
           <span>PRO MOVEMENT & AIM GUIDES</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight font-mono">
-          Rivals Movement & Sensitivity Guides
+          RIVALS Movement, Aim & Sensitivity Masterclass
         </h1>
-        <p className="text-gray-400 text-sm mt-1">
-          Master slide-canceling, convert mouse sensitivity from Valorant / CS2, and optimize graphics for max FPS.
+        <p className="text-gray-400 text-sm mt-2 max-w-3xl leading-relaxed">
+          Master slide-canceling, convert your mouse sensitivity from Valorant or Counter-Strike 2, configure crosshair settings, and optimize graphics performance for high-refresh-rate dueling.
         </p>
       </div>
 
+      <AuthorCard />
+
+      {/* Gameplay Visual Showcase */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+        <div className="rounded-2xl overflow-hidden border border-red-900/40 bg-slate-900/60 p-4 flex flex-col items-center">
+          <Image
+            src="/images/rivals-hero.webp"
+            alt="Roblox RIVALS High Speed Dueling Arena"
+            width={640}
+            height={360}
+            className="rounded-xl object-cover w-full h-56 border border-red-950"
+            priority
+          />
+          <p className="text-xs text-slate-400 mt-2 text-center font-mono">
+            Figure 1: Ranked 1v1 Arena — High verticality and dynamic sightline corridors.
+          </p>
+        </div>
+
+        <div className="rounded-2xl overflow-hidden border border-red-900/40 bg-slate-900/60 p-4 flex flex-col items-center">
+          <Image
+            src="/images/rivals-icon.webp"
+            alt="RIVALS Emblem and Combat Rank Badge"
+            width={640}
+            height={360}
+            className="rounded-xl object-contain w-full h-56 bg-black/50 border border-red-950"
+          />
+          <p className="text-xs text-slate-400 mt-2 text-center font-mono">
+            Figure 2: Official RIVALS Duelist Insignia and Ranked Tier Emblem.
+          </p>
+        </div>
+      </div>
+
       {/* Sensitivity Converter Calculator Tool */}
-      <div className="p-8 rounded-3xl bg-gradient-to-br from-[#090f1d] to-[#040710] border border-purple-900/40 space-y-6">
+      <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-[#090f1d] to-[#040710] border border-red-900/40 space-y-6">
         <div>
-          <span className="text-xs font-mono font-bold text-purple-400 uppercase tracking-widest block">INTERACTIVE CALCULATOR</span>
+          <span className="text-xs font-mono font-bold text-red-400 uppercase tracking-widest block">INTERACTIVE SENSITIVITY ENGINE</span>
           <h2 className="text-2xl font-black text-white font-mono flex items-center gap-2">
-            <Sliders className="w-6 h-6 text-purple-400" />
-            <span>Mouse Sensitivity Converter</span>
+            <Sliders className="w-6 h-6 text-red-400" />
+            <span>Competitive Mouse Sensitivity Converter</span>
           </h2>
-          <p className="text-xs text-gray-400 mt-1">Convert your muscle memory sensitivity directly into Roblox Rivals</p>
+          <p className="text-xs text-gray-400 mt-1">Convert your exact muscle memory sensitivity directly into Roblox Rivals</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 font-mono">
           {/* Valorant Converter */}
           <div className="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-4">
-            <h3 className="text-base font-bold text-white">Valorant → Rivals</h3>
+            <h3 className="text-base font-bold text-white">Valorant &rarr; Rivals</h3>
             <div className="space-y-2">
               <label className="text-xs text-gray-400 block">Enter Valorant In-Game Sensitivity:</label>
               <input
@@ -49,69 +127,104 @@ export default function GuidesPage() {
                 step="0.01"
                 value={valSens}
                 onChange={(e) => setValSens(Number(e.target.value))}
-                className="w-full bg-slate-950 border border-purple-900/50 rounded-xl px-4 py-3 text-sm text-white font-bold focus:outline-none"
+                className="w-full bg-slate-950 border border-red-900/50 rounded-xl px-4 py-3 text-sm text-white font-bold focus:outline-none"
               />
             </div>
             <div className="pt-2 border-t border-slate-800 flex justify-between items-center text-xs">
               <span className="text-gray-400">Equivalent Rivals Sensitivity:</span>
-              <span className="text-lg font-black text-purple-400 font-mono">{convertedRivalsSensFromVal}</span>
+              <span className="text-lg font-black text-red-400 font-mono">{convertedRivalsSensFromVal}</span>
             </div>
           </div>
 
-          {/* CS2 / Apex Converter */}
+          {/* CS2 Converter */}
           <div className="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-4">
-            <h3 className="text-base font-bold text-white">CS2 / Apex → Rivals</h3>
+            <h3 className="text-base font-bold text-white">Counter-Strike 2 &rarr; Rivals</h3>
             <div className="space-y-2">
-              <label className="text-xs text-gray-400 block">Enter CS2 / Apex Sensitivity:</label>
+              <label className="text-xs text-gray-400 block">Enter CS2 In-Game Sensitivity:</label>
               <input
                 type="number"
-                step="0.05"
+                step="0.01"
                 value={csSens}
                 onChange={(e) => setCsSens(Number(e.target.value))}
-                className="w-full bg-slate-950 border border-purple-900/50 rounded-xl px-4 py-3 text-sm text-white font-bold focus:outline-none"
+                className="w-full bg-slate-950 border border-red-900/50 rounded-xl px-4 py-3 text-sm text-white font-bold focus:outline-none"
               />
             </div>
             <div className="pt-2 border-t border-slate-800 flex justify-between items-center text-xs">
               <span className="text-gray-400">Equivalent Rivals Sensitivity:</span>
-              <span className="text-lg font-black text-purple-400 font-mono">{convertedRivalsSensFromCs}</span>
+              <span className="text-lg font-black text-red-400 font-mono">{convertedRivalsSensFromCs}</span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Written Guides Stack */}
-      <div className="space-y-6">
-        <h2 className="text-xl font-bold text-white font-mono flex items-center gap-2">
-          <Zap className="w-5 h-5 text-yellow-400" />
-          <span>Advanced Gameplay Tutorials</span>
-        </h2>
+      {/* In-depth Movement & Tactical Breakdown */}
+      <div className="space-y-8 font-sans">
+        <section className="p-6 sm:p-8 rounded-3xl bg-slate-900/70 border border-slate-800 space-y-4">
+          <h2 className="text-xl font-bold font-mono text-white flex items-center gap-2">
+            <Zap className="w-5 h-5 text-amber-400" />
+            1. Slide-Canceling & Bunnyhop Velocity Stacking
+          </h2>
+          <p className="text-sm text-slate-300 leading-relaxed">
+            Momentum preservation is the core differentiator between casual players and leaderboard veterans in RIVALS. When executing a slide-cancel, wait for the first two frames of the crouch slide audio prompt before hitting Jump. Releasing crouch at the exact apex of the jump converts ground friction into airborne forward velocity, letting you cross open sniper corridors 40% faster than standard sprint velocity.
+          </p>
+        </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {GUIDES.map((g, idx) => (
-            <div key={idx} className="p-6 rounded-3xl bg-[#080d19] border border-red-900/30 space-y-4 flex flex-col justify-between">
-              <div className="space-y-3">
-                <div className="flex justify-between items-center font-mono text-[10px]">
-                  <span className="px-2.5 py-1 rounded-full bg-purple-950 text-purple-300 border border-purple-800 font-bold">
-                    {g.category}
-                  </span>
-                  <span className="text-gray-500">{g.readTime}</span>
+        <section className="p-6 sm:p-8 rounded-3xl bg-slate-900/70 border border-slate-800 space-y-4">
+          <h2 className="text-xl font-bold font-mono text-white flex items-center gap-2">
+            <Crosshair className="w-5 h-5 text-red-400" />
+            2. Crosshair Placement & Pre-Aiming Corners
+          </h2>
+          <p className="text-sm text-slate-300 leading-relaxed">
+            Due to fast player models in RIVALS, reactive flick aiming is inherently less reliable than crosshair discipline. Keep your reticle positioned at head level approximately two player-widths away from door frames and ramp crests. This accounts for human reaction latency (average 180-220ms) so enemies run straight into your initial burst.
+          </p>
+        </section>
+
+        {/* Existing Guides Stack */}
+        <div className="space-y-6">
+          {GUIDES.map((guide, idx) => (
+            <div key={idx} className="p-6 sm:p-8 rounded-3xl bg-slate-900/70 border border-slate-800 space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-red-950/80 border border-red-800 flex items-center justify-center font-bold text-red-400 font-mono">
+                  0{idx + 1}
                 </div>
+                <div>
+                  <h3 className="text-lg font-bold font-mono text-white">{guide.title}</h3>
+                  <span className="text-xs text-gray-400">{guide.category}</span>
+                </div>
+              </div>
 
-                <h3 className="text-lg font-bold text-white font-mono">{g.title}</h3>
-                <p className="text-xs text-gray-400 leading-relaxed">{g.summary}</p>
+              <p className="text-sm text-slate-300 leading-relaxed">{guide.summary}</p>
 
-                <div className="space-y-2 pt-2 border-t border-slate-800 font-mono text-[11px]">
-                  {g.steps.map((step, sIdx) => (
-                    <div key={sIdx} className="flex items-start space-x-2 text-gray-300">
-                      <span className="text-red-400 font-bold">•</span>
+              <div className="p-4 rounded-xl bg-slate-950/80 border border-slate-800/80">
+                <span className="text-xs font-mono font-bold text-red-400 block mb-2">PRO EXECUTION STEPS:</span>
+                <ul className="space-y-2 text-xs text-slate-300">
+                  {guide.steps.map((step, sIdx) => (
+                    <li key={sIdx} className="flex items-start gap-2">
+                      <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                       <span>{step}</span>
-                    </div>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             </div>
           ))}
         </div>
+
+        {/* FAQ Section */}
+        <section className="p-6 sm:p-8 rounded-3xl bg-slate-900/70 border border-slate-800 space-y-6">
+          <h2 className="text-xl font-bold font-mono text-white flex items-center gap-2">
+            <HelpCircle className="w-5 h-5 text-amber-400" />
+            Guides Frequently Asked Questions
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {GUIDE_FAQS.map((faq, i) => (
+              <div key={i} className="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-2">
+                <h3 className="text-sm font-bold text-slate-200 font-mono">{faq.question}</h3>
+                <p className="text-xs text-slate-400 leading-relaxed font-sans">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </section>
       </div>
     </div>
   );
