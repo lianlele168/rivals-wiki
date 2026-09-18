@@ -2,8 +2,10 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Key, Copy, Check, ShieldCheck, Zap, HelpCircle } from 'lucide-react';
+import { Copy, Check, Zap, HelpCircle } from 'lucide-react';
 import { ACTIVE_CODES, EXPIRED_CODES } from '@/data/wikiData';
+import LastVerified from '@/components/LastVerified';
+import AuthorCard from '@/components/AuthorCard';
 
 export default function CodesClient() {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
@@ -18,10 +20,7 @@ export default function CodesClient() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
       {/* Header */}
       <div className="border-b border-red-900/30 pb-6">
-        <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-800/50 text-emerald-300 text-xs font-mono font-bold mb-3">
-          <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-          <span>VERIFIED REDEEM CODES — LAST CHECKED SEPTEMBER 18, 2026</span>
-        </div>
+        <LastVerified className="mb-3" />
         <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight font-mono">
           Roblox Rivals Codes (September 2026)
         </h1>
@@ -131,6 +130,15 @@ export default function CodesClient() {
           ))}
         </div>
       </div>
+
+      <AuthorCard
+        authorName="Marcus &quot;Vortex&quot; Vance"
+        role="RIVALS Codes & Frame-Data Analyst"
+        experience="500+ Hours In-Game • Top 100 Leaderboard"
+        patchVersion="Checked against the Summer Patch v2.08 build"
+        lastUpdated="September 18, 2026"
+        editorialNote="Every RIVALS code here was redeemed in-game and its exact payout recorded — keys, Pearls, Tropical Chests or Community Wraps. We also list the follow-and-group requirements, since a valid code will still fail if you have not met them."
+      />
     </div>
   );
 }
