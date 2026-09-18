@@ -72,20 +72,44 @@ export const GAME_INFO = {
 
 export const ACTIVE_CODES: CodeItem[] = [
   {
-    code: "FREE195",
+    code: "FREE198",
+    rewards: "3x Weapon Keys (newest milestone code)",
+    status: "active",
+    addedDate: "2026-09-18"
+  },
+  {
+    code: "FREE197",
     rewards: "3x Weapon Keys",
     status: "active",
-    addedDate: "2026-08-27"
+    addedDate: "2026-09-18"
+  },
+  {
+    code: "COMMUNITY25",
+    rewards: "1x Community Wrap (random weapon)",
+    status: "active",
+    addedDate: "2026-09-18"
+  },
+  {
+    code: "IMMELTINGHELP",
+    rewards: "2x Weapon Keys",
+    status: "active",
+    addedDate: "2026-09-18"
+  },
+  {
+    code: "COCONUTBONK",
+    rewards: "250x Pearls (summer event)",
+    status: "active",
+    addedDate: "2026-09-18"
+  },
+  {
+    code: "RIVALSSUMMER",
+    rewards: "3x Tropical Chests (summer event)",
+    status: "active",
+    addedDate: "2026-09-18"
   },
   {
     code: "CANNONBALLLLL",
     rewards: "5x Goodie Bags",
-    status: "active",
-    addedDate: "2026-08-27"
-  },
-  {
-    code: "COMMUNITY24",
-    rewards: "1x Community Wrap (Random Weapon)",
     status: "active",
     addedDate: "2026-08-27"
   },
@@ -109,13 +133,25 @@ export const ACTIVE_CODES: CodeItem[] = [
   },
   {
     code: "ELBILLUG",
-    rewards: "Fun Secret Item",
+    rewards: "No reward — joke code (spells GULLIBLE backwards)",
     status: "active",
-    addedDate: "2026-08-27"
+    addedDate: "2026-09-18"
   }
 ];
 
 export const EXPIRED_CODES: CodeItem[] = [
+  {
+    code: "FREE195",
+    rewards: "3x Weapon Keys (superseded — try FREE198/197)",
+    status: "expired",
+    addedDate: "2026-08-27"
+  },
+  {
+    code: "COMMUNITY24",
+    rewards: "1x Community Wrap (superseded by COMMUNITY25)",
+    status: "expired",
+    addedDate: "2026-08-27"
+  },
   {
     code: "ALPHA_TEST_2025",
     rewards: "10 Keys",

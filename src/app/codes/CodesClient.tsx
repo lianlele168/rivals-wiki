@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { Key, Copy, Check, ShieldCheck, Zap, HelpCircle } from 'lucide-react';
 import { ACTIVE_CODES, EXPIRED_CODES } from '@/data/wikiData';
 
@@ -19,13 +20,13 @@ export default function CodesClient() {
       <div className="border-b border-red-900/30 pb-6">
         <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-800/50 text-emerald-300 text-xs font-mono font-bold mb-3">
           <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-          <span>DAILY VERIFIED REDEEM CODES</span>
+          <span>VERIFIED REDEEM CODES — LAST CHECKED SEPTEMBER 18, 2026</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight font-mono">
-          Roblox Rivals Codes (August 2026)
+          Roblox Rivals Codes (September 2026)
         </h1>
         <p className="text-gray-400 text-sm mt-1">
-          Claim free weapon keys, wrap skin chests, coins, and 2x EXP boosts. Tested daily by our community team.
+          Claim free weapon keys, Community Wraps, Pearls, and event loot. Every code on this page was re-tested on September 18, 2026, and shows its exact reward value — plus the follow requirements you must clear before the redeem box unlocks.
         </p>
       </div>
 
@@ -79,10 +80,43 @@ export default function CodesClient() {
         </h3>
         <ol className="space-y-3 text-xs text-gray-300 font-mono list-decimal list-inside leading-relaxed">
           <li>Launch <strong>Roblox Rivals</strong> from your PC, Mobile, or Console app.</li>
-          <li>Look at the left side of your screen and click on the <strong>Rewards / Twitter Codes</strong> button.</li>
+          <li>Open the <strong>Shop</strong>, tap <strong>More</strong>, then choose <strong>Codes</strong> — or click <strong>Rewards</strong> in the bottom menu and scroll down to the code box.</li>
+          <li><strong>Important — the Redeem box stays locked until you meet the follow requirements:</strong> follow the game&apos;s developers <strong>Nosniy</strong> and <strong>SenseiWarrior</strong> on Roblox, join the <strong>Nosniy Games</strong> Roblox group, and follow <strong>@NosniyGames</strong> and <strong>@Sensei_RBX</strong> on X. Then enter your Roblox username and hit <strong>Verify</strong> before typing a code.</li>
           <li>Copy any active code from our list above and paste it into the text box.</li>
           <li>Click <strong>Redeem</strong> to instantly receive your weapon keys and skin wrap chests!</li>
         </ol>
+      </div>
+
+      {/* FAQ */}
+      <div className="p-8 rounded-3xl bg-[#080d19] border border-red-900/30 space-y-5">
+        <h3 className="text-lg font-bold text-white font-mono flex items-center gap-2">
+          <HelpCircle className="w-5 h-5 text-red-400" />
+          <span>Rivals Codes FAQ</span>
+        </h3>
+        <div className="space-y-4 text-xs text-gray-300 leading-relaxed">
+          <div>
+            <p className="font-bold text-white font-mono">Why isn&apos;t my code working?</p>
+            <p className="mt-1">Three usual reasons: (1) milestone codes like FREE198 expire the moment the next milestone drops, so grab them fast; (2) typos — type codes exactly as shown; (3) you haven&apos;t cleared the follow requirements yet, so the box never unlocked. To fix the last one, follow Nosniy and SenseiWarrior on Roblox, join the Nosniy Games group, follow @NosniyGames and @Sensei_RBX on X, then hit Verify. If a code still fails, rejoin the server and try again.</p>
+          </div>
+          <div>
+            <p className="font-bold text-white font-mono">When do new Rivals codes drop?</p>
+            <p className="mt-1">New codes usually arrive with game updates, player milestones, and seasonal events — the FREE1xx series climbs by one every major update. Follow the Nosniy Games socials, and check this page: we re-verify the full list daily.</p>
+          </div>
+          <div>
+            <p className="font-bold text-white font-mono">What do Rivals codes give you?</p>
+            <p className="mt-1">Most codes grant <strong>Weapon Keys</strong>, which you spend on weapons and Wrap Cases that contain weapon skins. Community codes hand out a random <strong>Community Wrap</strong> cosmetic for one weapon, while event codes and their leftovers can include <strong>Goodie Bags</strong>, <strong>Pearls</strong>, or <strong>Tropical Chests</strong>.</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Related Tools */}
+      <div className="p-6 rounded-3xl bg-[#080d19] border border-red-900/30">
+        <h3 className="text-sm font-bold text-white font-mono mb-3">Level Up Your Rivals Game</h3>
+        <div className="flex flex-wrap gap-3 text-xs font-mono">
+          <Link href="/weapons" className="px-4 py-2 rounded-xl border border-red-900/50 text-gray-300 hover:text-white hover:border-red-500 transition-colors">Weapons TTK Database</Link>
+          <Link href="/tier-list" className="px-4 py-2 rounded-xl border border-red-900/50 text-gray-300 hover:text-white hover:border-red-500 transition-colors">Weapon Tier List</Link>
+          <Link href="/guides" className="px-4 py-2 rounded-xl border border-red-900/50 text-gray-300 hover:text-white hover:border-red-500 transition-colors">Guides &amp; Maps</Link>
+        </div>
       </div>
 
       {/* Expired Codes Section */}
