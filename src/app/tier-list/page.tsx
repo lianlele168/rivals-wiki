@@ -4,7 +4,7 @@ import TierListClient from './TierListClient';
 import { TIER_LIST } from '@/data/wikiData';
 
 export const metadata: Metadata = {
-  title: 'Roblox Rivals Weapon & Utility Tier List (September 2026)',
+  title: 'Roblox Rivals Weapon & Utility Tier List ',
   description: 'Ranked tier list of best Primary weapons, Secondaries, and Utilities in Roblox Rivals. Evaluated by competitive duel winrates, recoil, and TTK.',
   alternates: {
     canonical: '/tier-list',

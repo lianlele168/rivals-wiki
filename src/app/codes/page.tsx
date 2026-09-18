@@ -4,12 +4,12 @@ import CodesClient from './CodesClient';
 import { ACTIVE_CODES, FAQ_ITEMS } from '@/data/wikiData';
 
 export const metadata: Metadata = {
-  title: 'Roblox Rivals Codes (September 2026) - Free Keys & Wrap Cases',
-  description: 'Full list of working active Roblox Rivals codes for September 2026. Claim free weapon keys, Community Wraps, Pearls, and Goodie Bags — with exact rewards and the follow requirements.',
+  title: 'Roblox Rivals Codes - Free Keys & Wrap Cases',
+  description: 'Full list of working active Roblox Rivals codes for . Claim free weapon keys, Community Wraps, Pearls, and Goodie Bags — with exact rewards and the follow requirements.',
   alternates: {
     canonical: '/codes',
   },
-  keywords: ['roblox rivals codes', 'rivals promo codes', 'rivals keys', 'rivals codes september 2026'],
+  keywords: ['roblox rivals codes', 'rivals promo codes', 'rivals keys', 'rivals codes '],
 };
 
 export default function CodesPage() {

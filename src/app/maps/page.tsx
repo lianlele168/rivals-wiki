@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import MapsClient from './MapsClient';
 
 export const metadata: Metadata = {
-  title: 'Roblox Rivals Map Guide & Ranked Callouts (September 2026)',
+  title: 'Roblox Rivals Map Guide & Ranked Callouts ',
   description: 'Detailed competitive map guides for Roblox Rivals: Sightlines, high-ground advantages, health pack spawns, and sniper vantage spots.',
   alternates: {
     canonical: '/maps',

@@ -75,67 +75,67 @@ export const ACTIVE_CODES: CodeItem[] = [
     code: "FREE198",
     rewards: "3x Weapon Keys (newest milestone code)",
     status: "active",
-    addedDate: "2026-09-18"
+    addedDate: ""
   },
   {
     code: "FREE197",
     rewards: "3x Weapon Keys",
     status: "active",
-    addedDate: "2026-09-18"
+    addedDate: ""
   },
   {
     code: "COMMUNITY25",
     rewards: "1x Community Wrap (random weapon)",
     status: "active",
-    addedDate: "2026-09-18"
+    addedDate: ""
   },
   {
     code: "IMMELTINGHELP",
     rewards: "2x Weapon Keys",
     status: "active",
-    addedDate: "2026-09-18"
+    addedDate: ""
   },
   {
     code: "COCONUTBONK",
     rewards: "250x Pearls (summer event)",
     status: "active",
-    addedDate: "2026-09-18"
+    addedDate: ""
   },
   {
     code: "RIVALSSUMMER",
     rewards: "3x Tropical Chests (summer event)",
     status: "active",
-    addedDate: "2026-09-18"
+    addedDate: ""
   },
   {
     code: "CANNONBALLLLL",
     rewards: "5x Goodie Bags",
     status: "active",
-    addedDate: "2026-08-27"
+    addedDate: ""
   },
   {
     code: "BONUS",
     rewards: "1x Weapon Key",
     status: "active",
-    addedDate: "2026-08-27"
+    addedDate: ""
   },
   {
     code: "BOOST",
     rewards: "1x Weapon Key",
     status: "active",
-    addedDate: "2026-08-27"
+    addedDate: ""
   },
   {
     code: "ROBLOX_RTC",
     rewards: "5x Weapon Keys",
     status: "active",
-    addedDate: "2026-08-27"
+    addedDate: ""
   },
   {
     code: "ELBILLUG",
     rewards: "No reward — joke code (spells GULLIBLE backwards)",
     status: "active",
-    addedDate: "2026-09-18"
+    addedDate: ""
   }
 ];
 
@@ -144,19 +144,19 @@ export const EXPIRED_CODES: CodeItem[] = [
     code: "FREE195",
     rewards: "3x Weapon Keys (superseded — try FREE198/197)",
     status: "expired",
-    addedDate: "2026-08-27"
+    addedDate: ""
   },
   {
     code: "COMMUNITY24",
     rewards: "1x Community Wrap (superseded by COMMUNITY25)",
     status: "expired",
-    addedDate: "2026-08-27"
+    addedDate: ""
   },
   {
     code: "ALPHA_TEST_2025",
     rewards: "10 Keys",
     status: "expired",
-    addedDate: "2025-11-01"
+    addedDate: ""
   }
 ];
 

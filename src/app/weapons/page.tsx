@@ -4,7 +4,7 @@ import WeaponsClient from './WeaponsClient';
 import { WEAPONS } from '@/data/wikiData';
 
 export const metadata: Metadata = {
-  title: 'Roblox Rivals Weapon Database & Stat Inspector (September 2026)',
+  title: 'Roblox Rivals Weapon Database & Stat Inspector ',
   description: 'Comprehensive specs for every weapon in Roblox Rivals: Fire rate, magazine size, headshot multipliers, recoil spread patterns, and reload speeds.',
   alternates: {
     canonical: '/weapons',

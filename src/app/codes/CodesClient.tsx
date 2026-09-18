@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { Copy, Check, Zap, HelpCircle } from 'lucide-react';
 import { ACTIVE_CODES, EXPIRED_CODES } from '@/data/wikiData';
-import LastVerified from '@/components/LastVerified';
+
 import AuthorCard from '@/components/AuthorCard';
 
 export default function CodesClient() {
@@ -20,12 +20,12 @@ export default function CodesClient() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
       {/* Header */}
       <div className="border-b border-red-900/30 pb-6">
-        <LastVerified className="mb-3" />
+        
         <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight font-mono">
-          Roblox Rivals Codes (September 2026)
+          Roblox Rivals Codes 
         </h1>
         <p className="text-gray-400 text-sm mt-1">
-          Claim free weapon keys, Community Wraps, Pearls, and event loot. Every code on this page was re-tested on September 18, 2026, and shows its exact reward value — plus the follow requirements you must clear before the redeem box unlocks.
+          Claim free weapon keys, Community Wraps, Pearls, and event loot. Every code on this page was re-tested on,  and shows its exact reward value — plus the follow requirements you must clear before the redeem box unlocks.
         </p>
       </div>
 
@@ -136,7 +136,6 @@ export default function CodesClient() {
         role="RIVALS Codes & Frame-Data Analyst"
         experience="500+ Hours In-Game • Top 100 Leaderboard"
         patchVersion="Checked against the Summer Patch v2.08 build"
-        lastUpdated="September 18, 2026"
         editorialNote="Every RIVALS code here was redeemed in-game and its exact payout recorded — keys, Pearls, Tropical Chests or Community Wraps. We also list the follow-and-group requirements, since a valid code will still fail if you have not met them."
       />
     </div>

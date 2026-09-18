@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import CalculatorClient from './CalculatorClient';
 
 export const metadata: Metadata = {
-  title: 'Roblox Rivals TTK & Weapon Damage Calculator (September 2026) | Roblox',
+  title: 'Roblox Rivals TTK & Weapon Damage Calculator | Roblox',
   description: 'Interactive TTK calculator for Roblox Rivals. Calculate headshot multipliers, effective damage falloff at range, and bullets-to-kill against shielded opponents.',
   alternates: {
     canonical: '/calculator',

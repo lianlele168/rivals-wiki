@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import CrosshairGeneratorClient from './CrosshairGeneratorClient';
 
 export const metadata: Metadata = {
-  title: 'Roblox Rivals Crosshair Generator & Pro Codes (September 2026)',
+  title: 'Roblox Rivals Crosshair Generator & Pro Codes ',
   description: 'Create custom static and dynamic crosshairs for Roblox Rivals. Customize dot size, inner line thickness, firing bloom, and export one-click import codes.',
   alternates: {
     canonical: '/crosshair-generator',

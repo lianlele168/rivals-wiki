@@ -7,7 +7,7 @@ import AuthorCard from '@/components/AuthorCard';
 import SensitivityConverter from '@/components/SensitivityConverter';
 
 export const metadata: Metadata = {
-  title: 'Roblox Rivals Movement Tech, Aim & Sensitivity Guide (September 2026)',
+  title: 'Roblox Rivals Movement Tech, Aim & Sensitivity Guide ',
   description: 'Master slide-canceling, crouch-spam aim resets, FOV optimization, and Valorant-to-Rivals mouse sensitivity conversion formulas.',
   alternates: {
     canonical: '/guides',
@@ -44,7 +44,7 @@ export default function GuidesPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'FAQPage',
-            dateModified: '2026-09-17',
+
             author: {
               '@type': 'Person',
               name: 'Marcus "Vortex" Vance',

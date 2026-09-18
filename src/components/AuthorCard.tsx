@@ -14,7 +14,7 @@ export default function AuthorCard({
   role = 'Lead FPS Frame-Data Analyst & Ranked Duelist',
   experience = '500+ Hours In-Game • Top 100 Leaderboard',
   patchVersion = 'RIVALS Summer Patch v2.08 Verified',
-  lastUpdated = 'September 2026',
+  lastUpdated = '',
   editorialNote = 'All weapon fire rates, damage falloff curves, headshot multipliers, and hitbox data are reverse-engineered directly from 120 FPS high-speed gameplay recordings.',
 }: AuthorCardProps) {
   return (
@@ -41,9 +41,7 @@ export default function AuthorCard({
           <span className="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-medium bg-amber-500/10 text-amber-300 border border-amber-500/20">
             ⚡ {patchVersion}
           </span>
-          <span className="text-xs text-slate-400">
-            Updated: <strong className="text-slate-200">{lastUpdated}</strong>
-          </span>
+          
         </div>
       </div>
 
