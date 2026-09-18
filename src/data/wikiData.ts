@@ -141,20 +141,8 @@ export const ACTIVE_CODES: CodeItem[] = [
 
 export const EXPIRED_CODES: CodeItem[] = [
   {
-    code: "FREE195",
-    rewards: "3x Weapon Keys (superseded — try FREE198/197)",
-    status: "expired",
-    addedDate: ""
-  },
-  {
     code: "COMMUNITY24",
     rewards: "1x Community Wrap (superseded by COMMUNITY25)",
-    status: "expired",
-    addedDate: ""
-  },
-  {
-    code: "ALPHA_TEST_2025",
-    rewards: "10 Keys",
     status: "expired",
     addedDate: ""
   }
