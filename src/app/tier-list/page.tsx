@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import TierListClient from './TierListClient';
-import { TIER_LIST } from '@/data/wikiData';
+import { WEAPON_QUALITIES } from '@/data/wikiData';
 
 export const metadata: Metadata = {
   title: 'Roblox Rivals Weapon & Utility Tier List ',
@@ -18,12 +18,12 @@ export default function TierListPage() {
     '@type': 'ItemList',
     name: 'Roblox Rivals Ranked Weapon Tier List',
     description: 'Competitive ranking of weapons and tactical utility items in Roblox Rivals.',
-    numberOfItems: TIER_LIST.length,
-    itemListElement: TIER_LIST.map((item, idx) => ({
+    numberOfItems: WEAPON_QUALITIES.length,
+    itemListElement: WEAPON_QUALITIES.map((item, idx) => ({
       '@type': 'ListItem',
       position: idx + 1,
       name: item.name,
-      description: `${item.tier} Tier ${item.category} weapon. ${item.reason || ''}`,
+      description: item.note,
     })),
   };
 

@@ -5,31 +5,6 @@ export interface CodeItem {
   addedDate: string;
 }
 
-export interface WeaponData {
-  id: string;
-  name: string;
-  category: 'Primary' | 'Secondary' | 'Melee' | 'Utility';
-  rarity: 'Mythical' | 'Legendary' | 'Rare' | 'Uncommon' | 'Common';
-  headshotDamage: number;
-  bodyDamage: number;
-  fireRateRPM: number;
-  magazineSize: number;
-  reloadTimeSec: number;
-  ttk100hp: number; // in seconds
-  ttk150hp: number; // in seconds
-  effectiveRange: string;
-  description: string;
-  proTip: string;
-}
-
-export interface TierItem {
-  name: string;
-  category: string;
-  tier: 'S+' | 'S' | 'A' | 'B';
-  reason: string;
-  statsSummary: string;
-}
-
 export interface CrosshairPreset {
   id: string;
   name: string;
@@ -148,194 +123,66 @@ export const EXPIRED_CODES: CodeItem[] = [
   }
 ];
 
+export interface WeaponData {
+  id: string;
+  name: string;
+  category: "Primary" | "Secondary" | "Melee";
+  quality: "Standard" | "Prime" | "Contraband";
+  stats: string; // verified values sourced from community wiki pages, or "Value not documented"
+  description: string;
+}
+
+// All names verified against Miraheze wiki / Fandom / Rivals Pulse (Sept 2026).
+// Numeric values are included ONLY where a source documents them; everything
+// else is explicitly marked "Value not documented" rather than invented.
 export const WEAPONS: WeaponData[] = [
-  {
-    id: "assault-rifle",
-    name: "Assault Rifle (AR-47)",
-    category: "Primary",
-    rarity: "Legendary",
-    headshotDamage: 36,
-    bodyDamage: 22,
-    fireRateRPM: 650,
-    magazineSize: 30,
-    reloadTimeSec: 2.1,
-    ttk100hp: 0.28,
-    ttk150hp: 0.46,
-    effectiveRange: "Medium to Long Range",
-    description: "Versatile, highly controllable rifle capable of 3-tap headshot kills at medium ranges.",
-    proTip: "First 3 shots have zero recoil. Tap-fire at long ranges to guarantee headshots."
-  },
-  {
-    id: "heavy-sniper",
-    name: "Heavy Sniper Rifle",
-    category: "Primary",
-    rarity: "Mythical",
-    headshotDamage: 160,
-    bodyDamage: 95,
-    fireRateRPM: 48,
-    magazineSize: 5,
-    reloadTimeSec: 3.2,
-    ttk100hp: 0.00,
-    ttk150hp: 0.00,
-    effectiveRange: "Long to Extreme Range",
-    description: "One-shot headshot weapon against full armor players. High bullet speed with armor penetration.",
-    proTip: "Combine with slide-cancel quick-scoping for devastating CQC surprise kills."
-  },
-  {
-    id: "pump-shotgun",
-    name: "Pump Action Shotgun",
-    category: "Primary",
-    rarity: "Rare",
-    headshotDamage: 130,
-    bodyDamage: 90,
-    fireRateRPM: 72,
-    magazineSize: 6,
-    reloadTimeSec: 2.8,
-    ttk100hp: 0.00,
-    ttk150hp: 0.83,
-    effectiveRange: "Close Quarters (0-10m)",
-    description: "Extreme point-blank damage. Pellets hit hard enough to instantly eliminate unarmored foes.",
-    proTip: "Jump and slide past container corners to close distance before triggering the shot."
-  },
-  {
-    id: "vulcan-minigun",
-    name: "Vulcan Minigun",
-    category: "Primary",
-    rarity: "Legendary",
-    headshotDamage: 24,
-    bodyDamage: 15,
-    fireRateRPM: 950,
-    magazineSize: 100,
-    reloadTimeSec: 4.5,
-    ttk100hp: 0.31,
-    ttk150hp: 0.44,
-    effectiveRange: "Medium Range Suppressive",
-    description: "Sustained fire beast capable of melting multiple enemies holding narrow choke points.",
-    proTip: "Hold right-click to pre-spin barrels before jumping around corners."
-  },
-  {
-    id: "dual-uzis",
-    name: "Dual Micro Uzis",
-    category: "Secondary",
-    rarity: "Rare",
-    headshotDamage: 20,
-    bodyDamage: 13,
-    fireRateRPM: 1050,
-    magazineSize: 40,
-    reloadTimeSec: 1.8,
-    ttk100hp: 0.23,
-    ttk150hp: 0.34,
-    effectiveRange: "Close Range Sprint",
-    description: "Blistering rate of fire. Insane hip-fire accuracy during slide cancels.",
-    proTip: "Switch to Uzis when primary mag is empty during intense 1v1 CQC duels."
-  },
-  {
-    id: "heavy-revolver",
-    name: "Magnum Revolver (.44)",
-    category: "Secondary",
-    rarity: "Legendary",
-    headshotDamage: 75,
-    bodyDamage: 45,
-    fireRateRPM: 180,
-    magazineSize: 6,
-    reloadTimeSec: 2.2,
-    ttk100hp: 0.33,
-    ttk150hp: 0.66,
-    effectiveRange: "Medium Range Precision",
-    description: "2-shot body kill or 1-shot headshot + body tap combo. Favored by high-skill duelists.",
-    proTip: "Line up headshots while counter-strafing behind hard cover."
-  },
-  {
-    id: "shadow-katana",
-    name: "Shadow Katana",
-    category: "Melee",
-    rarity: "Mythical",
-    headshotDamage: 110,
-    bodyDamage: 80,
-    fireRateRPM: 130,
-    magazineSize: 1,
-    reloadTimeSec: 0.0,
-    ttk100hp: 0.00,
-    ttk150hp: 0.46,
-    effectiveRange: "Melee Lunge Range",
-    description: "Grants +15% movement speed when equipped. Forward lunge attack slices through shields.",
-    proTip: "Equip Katana when rotating across open map areas to maximize movement speed."
-  },
-  {
-    id: "frag-grenade",
-    name: "Frag Grenade",
-    category: "Utility",
-    rarity: "Uncommon",
-    headshotDamage: 125,
-    bodyDamage: 125,
-    fireRateRPM: 30,
-    magazineSize: 2,
-    reloadTimeSec: 5.0,
-    ttk100hp: 0.00,
-    ttk150hp: 0.00,
-    effectiveRange: "Throwable AoE",
-    description: "Cookable explosive grenade that deals lethal damage in a 5-meter blast radius.",
-    proTip: "Cook grenade for 1.5 seconds before throwing over walls into objective points."
-  }
+  { id: "assault-rifle", name: "Assault Rifle", category: "Primary", quality: "Standard", stats: "12 dmg/shot | ~600 RPM (0.1s interval) | 20-rd mag | 1.25x headshot | falloff 13-3 (50-200 studs) | -10% move speed", description: "The default free primary — every player starts here. Surprisingly competitive for its cost." },
+  { id: "shotgun", name: "Shotgun", category: "Primary", quality: "Standard", stats: "10 pellets x 7.5 dmg | 1.5x headshot (112.5 max) | 7-rd mag + 35 reserve | 0.7s interval | 6.5-degree spread | min 25 dmg past 10 studs", description: "Semi-auto pellet monster at close range; falls off hard past 10 studs." },
+  { id: "sniper", name: "Sniper", category: "Primary", quality: "Standard", stats: "150 headshot (one-shot kill) | 50 body | no damage falloff | long interval between shots | reload/fire rate not documented", description: "The most expensive Standard weapon. One tap to the head ends any duel." },
+  { id: "minigun", name: "Minigun", category: "Primary", quality: "Prime", stats: "8 dmg/shot | 300 reserve | 1.25x headshot | falloff 9-4.5 | 2-pen bullets | no reload needed", description: "Prime-tier hose with bullet penetration. Slows you while spinning up." },
+  { id: "paintball-gun", name: "Paintball Gun", category: "Primary", quality: "Prime", stats: "Value not documented (slow fire rate, high per-shot damage per community description)", description: "Prime-tier plinker with a unique projectile feel." },
+  { id: "bow", name: "Bow", category: "Primary", quality: "Standard", stats: "Value not documented", description: "Skill-shot projectile weapon." },
+  { id: "burst-rifle", name: "Burst Rifle", category: "Primary", quality: "Standard", stats: "Value not documented", description: "Burst-fire rifle." },
+  { id: "dart-gun", name: "Dart Gun", category: "Primary", quality: "Standard", stats: "Value not documented", description: "Utility-flavored primary." },
+  { id: "firework-launcher", name: "Firework Launcher", category: "Primary", quality: "Prime", stats: "Value not documented", description: "Explosive festive launcher." },
+  { id: "flamethrower", name: "Flamethrower", category: "Primary", quality: "Prime", stats: "Value not documented", description: "Close-range area denial." },
+  { id: "grenade-launcher", name: "Grenade Launcher", category: "Primary", quality: "Prime", stats: "Value not documented", description: "Arcing explosive projectiles." },
+  { id: "hyperlaser", name: "Hyperlaser", category: "Primary", quality: "Prime", stats: "Value not documented (spelling varies by source — verify in game)", description: "Energy beam weapon." },
+  { id: "ice-gun", name: "Ice Gun", category: "Primary", quality: "Prime", stats: "Value not documented", description: "Cryo utility weapon." },
+  { id: "ray-gun", name: "Ray Gun", category: "Primary", quality: "Prime", stats: "Value not documented", description: "Classic energy weapon." },
+  { id: "subspace-tripmine-gun", name: "Subspace Tripmine Gun", category: "Primary", quality: "Prime", stats: "Value not documented", description: "Deploys tripmines as a gun slot." },
+  { id: "tesla-gun", name: "Tesla Gun", category: "Primary", quality: "Prime", stats: "Value not documented", description: "Chain-lightning weapon." },
+  { id: "revolver", name: "Revolver", category: "Secondary", quality: "Standard", stats: "30 dmg | 40 headshot | falloff 34-8.5 (50-200 studs) | 0.9s deploy time | -5% move speed | semi-auto", description: "The reliable sidearm — solid headshot payoff." },
+  { id: "uzi", name: "Uzi", category: "Secondary", quality: "Standard", stats: "8 dmg/shot | 24-rd mag + 96 reserve | 1.25x headshot | falloff to 1.75-2 at range | 3-degree spread", description: "Fast-firing pocket SMG." },
+  { id: "blast-bow", name: "Blast Bow", category: "Secondary", quality: "Prime", stats: "Value not documented", description: "Explosive secondary bow." },
+  { id: "crossbow", name: "Crossbow", category: "Secondary", quality: "Standard", stats: "Value not documented", description: "Silent bolt thrower." },
+  { id: "dual-guns", name: "Dual Guns", category: "Secondary", quality: "Prime", stats: "Value not documented", description: "Akimbo pistols." },
+  { id: "hand-cannon", name: "Hand Cannon", category: "Secondary", quality: "Prime", stats: "Value not documented", description: "Heavy-hitting pocket cannon." },
+  { id: "handgun", name: "Handgun", category: "Secondary", quality: "Standard", stats: "Value not documented", description: "Basic sidearm." },
+  { id: "harpoon-gun", name: "Harpoon Gun", category: "Secondary", quality: "Prime", stats: "Value not documented", description: "Pulls targets in." },
+  { id: "shotbow", name: "Shotbow", category: "Secondary", quality: "Prime", stats: "Value not documented", description: "Shotgun-meets-bow hybrid." },
+  { id: "stake-launcher", name: "Stake Launcher", category: "Secondary", quality: "Prime", stats: "Value not documented", description: "Projectile harpoon variant." },
+  { id: "taser", name: "Taser", category: "Secondary", quality: "Standard", stats: "Value not documented", description: "Stun sidearm." },
+  { id: "katana", name: "Katana", category: "Melee", quality: "Standard", stats: "Value not documented", description: "The signature melee blade." },
+  { id: "knife", name: "Knife", category: "Melee", quality: "Standard", stats: "Value not documented", description: "Default melee." },
+  { id: "machete", name: "Machete", category: "Melee", quality: "Standard", stats: "Value not documented", description: "Heavy chopping melee." },
+  { id: "axe", name: "Axe", category: "Melee", quality: "Standard", stats: "Value not documented", description: "Slow, heavy melee." },
+  { id: "war-hammer", name: "War Hammer", category: "Melee", quality: "Prime", stats: "Value not documented", description: "Massive slow melee." }
 ];
 
-export const TIER_LIST: TierItem[] = [
-  {
-    name: "Heavy Sniper Rifle",
-    category: "Primary",
-    tier: "S+",
-    reason: "Instant one-shot headshot kill potential across any distance; unmatched game-changing impact in 1v1 duels.",
-    statsSummary: "Head: 160 dmg | TTK: 0.00s | Range: Extreme"
-  },
-  {
-    name: "Assault Rifle (AR-47)",
-    category: "Primary",
-    tier: "S+",
-    reason: "The most consistent and reliable gun in the entire game. Zero initial recoil and fast 0.28s TTK.",
-    statsSummary: "Head: 36 dmg | Body: 22 dmg | RPM: 650"
-  },
-  {
-    name: "Shadow Katana",
-    category: "Melee",
-    tier: "S+",
-    reason: "Passively boosts movement speed by +15% when pulled out; lunge strike one-shots unarmored enemies.",
-    statsSummary: "Lunge: 110 dmg | Movement: +15% Speed"
-  },
-  {
-    name: "Magnum Revolver (.44)",
-    category: "Secondary",
-    tier: "S",
-    reason: "Deals 75 headshot damage; the best secondary for switching after an initial primary bullet hit.",
-    statsSummary: "Head: 75 dmg | Body: 45 dmg | RPM: 180"
-  },
-  {
-    name: "Dual Micro Uzis",
-    category: "Secondary",
-    tier: "S",
-    reason: "1050 RPM fire rate destroys CQC enemies in 0.23 seconds during slide cancels.",
-    statsSummary: "Head: 20 dmg | RPM: 1050 | Mag: 40"
-  },
-  {
-    name: "Pump Action Shotgun",
-    category: "Primary",
-    tier: "A",
-    reason: "Devastating in close-quarters CQC maps like Warehouse, but drops off heavily past 12 meters.",
-    statsSummary: "Point-Blank: 130 dmg | Mag: 6"
-  },
-  {
-    name: "Vulcan Minigun",
-    category: "Primary",
-    tier: "A",
-    reason: "Huge 100-round mag and pre-spin capability can lock down entire choke points.",
-    statsSummary: "Head: 24 dmg | Mag: 100 | Spin-up: 0.4s"
-  },
-  {
-    name: "Frag Grenade",
-    category: "Utility",
-    tier: "A",
-    reason: "Clears out defenders hiding behind deployable shields or corner obstacles.",
-    statsSummary: "Max Explosion: 125 dmg | Radius: 5m"
-  }
+export interface QualityEntry {
+  name: string;
+  note: string;
+}
+
+// The real in-game classification (verified on Fandom): weapons come in
+// Standard / Prime / Contraband quality bands — not invented S/A/B meta tiers.
+export const WEAPON_QUALITIES: QualityEntry[] = [
+  { name: "Standard", note: "Bought with in-game cash in the shop. Assault Rifle is the free default; Sniper is the most expensive Standard weapon." },
+  { name: "Prime", note: "Higher-tier band. Weapons like Minigun and Paintball Gun live here, with skins from Skin Case 1-3, Spooky/Festive Cases, Ultra Key Bundle and the Glory Shop." },
+  { name: "Contraband", note: "The rarest band, documented on the community wiki." },
+  { name: "Gamemode Exclusive", note: "5 additional weapons exist only inside specific gamemodes." },
+  { name: "Skins", note: "Every weapon carries skins across Common / Rare / Legendary / Mythical (e.g. Uzi: Pine = Common, Electro / Money Gun = Legendary, Keyzi = Mythical)." }
 ];
 
 export const CROSSHAIR_PRESETS: CrosshairPreset[] = [

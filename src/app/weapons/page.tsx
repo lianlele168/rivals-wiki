@@ -23,7 +23,7 @@ export default function WeaponsPage() {
       '@type': 'ListItem',
       position: idx + 1,
       name: w.name,
-      description: `${w.category} weapon dealing ${w.bodyDamage} body damage at ${w.fireRateRPM} RPM.`,
+      description: `${w.category} weapon (${w.quality}). ${w.stats}`,
     })),
   };
 

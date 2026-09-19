@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Target, Crosshair, Swords, Trophy, Key, MapPin, BookOpen, Sparkles, Copy, Check, ArrowRight, Flame, ShieldAlert, Zap } from 'lucide-react';
 import AuthorCard from '@/components/AuthorCard';
-import { GAME_INFO, ACTIVE_CODES, WEAPONS, TIER_LIST, FAQ_ITEMS } from '@/data/wikiData';
+import { GAME_INFO, ACTIVE_CODES, WEAPONS, WEAPON_QUALITIES, FAQ_ITEMS } from '@/data/wikiData';
 
 export default function HomeClient() {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
@@ -304,7 +304,7 @@ export default function HomeClient() {
                 <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-red-950 text-red-400 border border-red-800">
                   {w.category}
                 </span>
-                <span className="text-xs font-mono font-black text-yellow-400">{w.rarity}</span>
+                <span className="text-xs font-mono font-black text-yellow-400">{w.quality}</span>
               </div>
 
               <div>
@@ -315,11 +315,11 @@ export default function HomeClient() {
               <div className="pt-3 border-t border-slate-800 grid grid-cols-2 gap-2 text-[11px] font-mono">
                 <div>
                   <span className="text-gray-500 block">Head Damage</span>
-                  <span className="font-bold text-red-400 text-sm">{w.headshotDamage} HP</span>
+                  <span className="font-bold text-red-400 text-sm">{w.quality}</span>
                 </div>
                 <div>
                   <span className="text-gray-500 block">100 HP TTK</span>
-                  <span className="font-bold text-yellow-400 text-sm">{w.ttk100hp}s</span>
+                  <span className="font-bold text-yellow-400 text-sm">{w.category}</span>
                 </div>
               </div>
             </div>
