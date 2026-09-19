@@ -346,6 +346,6 @@ export const FAQ_ITEMS = [
   },
   {
     question: "What is the best weapon in Roblox Rivals 2026?",
-    answer: "The Heavy Sniper Rifle and Assault Rifle (AR-47) share S+ Tier status. The Sniper provides one-shot headshot kills, while the AR-47 delivers the most consistent medium-range DPS."
+    answer: "The Sniper provides one-shot headshot kills (150 damage), while the Assault Rifle is the free default with the most consistent medium-range performance. There is no official tier ranking — see the quality guide."
   }
 ];

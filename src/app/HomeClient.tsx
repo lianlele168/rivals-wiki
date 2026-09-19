@@ -35,7 +35,7 @@ export default function HomeClient() {
     },
     {
       title: "2026 Meta Weapon Tier List",
-      desc: "Rankings from S+ God Tier (Heavy Sniper, AR-47) to B Tier secondaries with meta analysis.",
+      desc: "The real in-game quality bands: Standard, Prime and Contraband, plus gamemode-exclusive weapons and the skin economy.",
       href: "/tier-list",
       icon: Trophy,
       color: "from-yellow-600 to-amber-500",
