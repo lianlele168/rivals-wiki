@@ -47,8 +47,8 @@ export default function GuidesPage() {
 
             author: {
               '@type': 'Person',
-              name: 'Marcus "Vortex" Vance',
-              jobTitle: 'Lead FPS Frame-Data Analyst & Ranked Duelist',
+              name: 'Hlele',
+              jobTitle: 'Editor',
             },
             mainEntity: GUIDE_FAQS.map((faq) => ({
               '@type': 'Question',

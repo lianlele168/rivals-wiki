@@ -132,11 +132,11 @@ export default function CodesClient() {
       </div>
 
       <AuthorCard
-        authorName="Marcus &quot;Vortex&quot; Vance"
-        role="RIVALS Codes & Frame-Data Analyst"
-        experience="500+ Hours In-Game • Top 100 Leaderboard"
+        authorName="Hlele"
+        role="Editor"
+        experience="AI-assisted research, human-reviewed"
         patchVersion="Checked against the Summer Patch v2.08 build"
-        editorialNote="Every RIVALS code here was redeemed in-game and its exact payout recorded — keys, Pearls, Tropical Chests or Community Wraps. We also list the follow-and-group requirements, since a valid code will still fail if you have not met them."
+        editorialNote="Every RIVALS code here was verified against multiple sources before listing, including its exact payout — keys, Pearls, Tropical Chests or Community Wraps, plus the follow-and-group requirements, since a valid code will still fail if you have not met them. Codes we could not re-confirm are explicitly marked."
       />
     </div>
   );

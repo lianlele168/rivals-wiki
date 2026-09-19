@@ -10,12 +10,12 @@ interface AuthorCardProps {
 }
 
 export default function AuthorCard({
-  authorName = 'Marcus "Vortex" Vance',
-  role = 'Lead FPS Frame-Data Analyst & Ranked Duelist',
-  experience = '500+ Hours In-Game • Top 100 Leaderboard',
+  authorName = 'Hlele',
+  role = 'Editor',
+  experience = 'AI-assisted research, human-reviewed',
   patchVersion = 'RIVALS Summer Patch v2.08 Verified',
   lastUpdated = '',
-  editorialNote = 'All weapon fire rates, damage falloff curves, headshot multipliers, and hitbox data are reverse-engineered directly from 120 FPS high-speed gameplay recordings.',
+  editorialNote = 'All weapon fire rates, damage falloff curves, headshot multipliers, and hitbox data are cross-checked against multiple community sources and gameplay recordings; any figure we could not independently confirm is explicitly labeled as unverified.',
 }: AuthorCardProps) {
   return (
     <div className="w-full rounded-2xl bg-slate-900/90 border border-red-500/20 p-4 sm:p-5 backdrop-blur-md my-6 shadow-xl font-sans">

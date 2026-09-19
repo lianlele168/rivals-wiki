@@ -52,6 +52,10 @@ export default function Footer() {
           <span>Crafted with</span> <Heart className="w-3 h-3 text-red-500 fill-red-500" /> <span>for FPS Gamers</span>
         </p>
       </div>
+
+      <div className="max-w-7xl mx-auto mt-4 text-[11px] text-gray-600 text-center">
+        <p>Content AI-assisted, human-reviewed · Data sources cited on page · Contact: lianlele168@gmail</p>
+      </div>
     </footer>
   );
 }

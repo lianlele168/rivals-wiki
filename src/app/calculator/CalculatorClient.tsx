@@ -80,8 +80,8 @@ export default function CalculatorClient() {
 
             author: {
               '@type': 'Person',
-              name: 'Marcus "Vortex" Vance',
-              jobTitle: 'Lead FPS Frame-Data Analyst & Ranked Duelist',
+              name: 'Hlele',
+              jobTitle: 'Editor',
             },
             mainEntity: CALCULATOR_FAQS.map((faq) => ({
               '@type': 'Question',
