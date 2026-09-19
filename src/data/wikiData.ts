@@ -53,38 +53,14 @@ export const ACTIVE_CODES: CodeItem[] = [
     addedDate: ""
   },
   {
-    code: "FREE197",
-    rewards: "3x Weapon Keys",
-    status: "active",
-    addedDate: ""
-  },
-  {
     code: "COMMUNITY25",
     rewards: "1x Community Wrap (random weapon)",
     status: "active",
     addedDate: ""
   },
   {
-    code: "IMMELTINGHELP",
-    rewards: "2x Weapon Keys",
-    status: "active",
-    addedDate: ""
-  },
-  {
-    code: "COCONUTBONK",
-    rewards: "250x Pearls (summer event)",
-    status: "active",
-    addedDate: ""
-  },
-  {
-    code: "RIVALSSUMMER",
-    rewards: "3x Tropical Chests (summer event)",
-    status: "active",
-    addedDate: ""
-  },
-  {
-    code: "CANNONBALLLLL",
-    rewards: "5x Goodie Bags",
+    code: "ROBLOX_RTC",
+    rewards: "5x Weapon Keys",
     status: "active",
     addedDate: ""
   },
@@ -101,12 +77,6 @@ export const ACTIVE_CODES: CodeItem[] = [
     addedDate: ""
   },
   {
-    code: "ROBLOX_RTC",
-    rewards: "5x Weapon Keys",
-    status: "active",
-    addedDate: ""
-  },
-  {
     code: "ELBILLUG",
     rewards: "No reward — joke code (spells GULLIBLE backwards)",
     status: "active",
@@ -115,6 +85,36 @@ export const ACTIVE_CODES: CodeItem[] = [
 ];
 
 export const EXPIRED_CODES: CodeItem[] = [
+  {
+    code: "FREE197",
+    rewards: "3x Weapon Keys — moved to expired by the RIVALS wiki (rev 2026-09-13); some aggregators still list it, so test in game",
+    status: "expired",
+    addedDate: ""
+  },
+  {
+    code: "IMMELTINGHELP",
+    rewards: "2x Weapon Keys — retired with the last update batch",
+    status: "expired",
+    addedDate: ""
+  },
+  {
+    code: "CANNONBALLLLL",
+    rewards: "5x Goodie Bags — retired with the last update batch",
+    status: "expired",
+    addedDate: ""
+  },
+  {
+    code: "COCONUTBONK",
+    rewards: "250x Pearls — Summer Event ended with Update 22",
+    status: "expired",
+    addedDate: ""
+  },
+  {
+    code: "RIVALSSUMMER",
+    rewards: "3x Tropical Chests — Summer Event ended with Update 22",
+    status: "expired",
+    addedDate: ""
+  },
   {
     code: "COMMUNITY24",
     rewards: "1x Community Wrap (superseded by COMMUNITY25)",

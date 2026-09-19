@@ -25,7 +25,7 @@ export default function CodesClient() {
           Roblox Rivals Codes 
         </h1>
         <p className="text-gray-400 text-sm mt-1">
-          Claim free weapon keys, Community Wraps, Pearls, and event loot. Every code on this page was re-tested on,  and shows its exact reward value — plus the follow requirements you must clear before the redeem box unlocks.
+          Claim free weapon keys, Community Wraps, Goodie Bags, and event loot. Every code below is checked against public RIVALS code trackers before it is listed, and each entry shows its exact reward — plus the follow requirements you must clear before the redeem box unlocks. Codes expire fast, so if one fails it has usually been retired rather than mistyped.
         </p>
       </div>
 

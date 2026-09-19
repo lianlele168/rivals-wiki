@@ -5,7 +5,7 @@ import { ACTIVE_CODES, FAQ_ITEMS } from '@/data/wikiData';
 
 export const metadata: Metadata = {
   title: 'Roblox Rivals Codes - Free Keys & Wrap Cases',
-  description: 'Full list of working active Roblox Rivals codes for . Claim free weapon keys, Community Wraps, Pearls, and Goodie Bags — with exact rewards and the follow requirements.',
+  description: 'Full list of working active Roblox Rivals codes. Claim free weapon keys, Community Wraps, Pearls, and Goodie Bags — with exact rewards and the follow requirements.',
   alternates: {
     canonical: '/codes',
   },
@@ -38,7 +38,7 @@ export default function CodesPage() {
         name: 'When do new Rivals codes come out?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'New codes usually arrive with game updates, player milestones, and seasonal events. The FREE1xx series increases by one with each major update. This page is re-verified daily.',
+          text: 'New codes usually arrive with game updates, player milestones, and seasonal events. The FREE1xx series increases by one with each major update — a new milestone code normally retires the previous one, so old FREE codes stop working fast.',
         },
       },
       {
