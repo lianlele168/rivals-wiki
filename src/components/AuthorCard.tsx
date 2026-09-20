@@ -13,9 +13,9 @@ export default function AuthorCard({
   authorName = 'Hlele',
   role = 'Editor',
   experience = 'AI-assisted research, human-reviewed',
-  patchVersion = 'RIVALS Summer Patch v2.08 Verified',
+  patchVersion = 'RIVALS Summer Patch v2.08',
   lastUpdated = '',
-  editorialNote = 'All weapon fire rates, damage falloff curves, headshot multipliers, and hitbox data are cross-checked against multiple community sources and gameplay recordings; any figure we could not independently confirm is explicitly labeled as unverified.',
+  editorialNote = 'All weapon fire rates, damage falloff curves, headshot multipliers, and hitbox data are cross-checked against multiple community sources; any figure we could not independently confirm is explicitly labeled as unverified.',
 }: AuthorCardProps) {
   return (
     <div className="w-full rounded-2xl bg-slate-900/90 border border-red-500/20 p-4 sm:p-5 backdrop-blur-md my-6 shadow-xl font-sans">
@@ -28,7 +28,7 @@ export default function AuthorCard({
             <div className="flex items-center space-x-2">
               <span className="font-bold text-white text-sm sm:text-base">{authorName}</span>
               <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-red-500/10 text-red-400 border border-red-500/20 font-mono">
-                ✓ Expert Verified
+                Independent editorial
               </span>
             </div>
             <p className="text-xs text-slate-400 mt-0.5">
