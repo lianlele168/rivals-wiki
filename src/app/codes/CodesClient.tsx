@@ -99,7 +99,7 @@ export default function CodesClient() {
           </div>
           <div>
             <p className="font-bold text-white font-mono">When do new Rivals codes drop?</p>
-            <p className="mt-1">New codes usually arrive with game updates, player milestones, and seasonal events — the FREE1xx series climbs by one every major update. Follow the Nosniy Games socials, and check this page: we re-verify the full list daily.</p>
+            <p className="mt-1">New codes usually arrive with game updates, player milestones, and seasonal events — the FREE1xx series climbs by one every major update. Follow the Nosniy Games socials, and check this page: we re-check the full list against the sources above.</p>
           </div>
           <div>
             <p className="font-bold text-white font-mono">What do Rivals codes give you?</p>
