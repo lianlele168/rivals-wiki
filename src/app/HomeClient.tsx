@@ -58,7 +58,7 @@ export default function HomeClient() {
       badge: "PRO GUIDE"
     },
     {
-      title: "Verified Active Redeem Codes",
+      title: "Active Redeem Codes",
       desc: "100% working Roblox Rivals keys, skin wrap chests, and coin boost codes.",
       href: "/codes",
       icon: Key,

@@ -19,7 +19,7 @@ export default function Footer() {
           </p>
           <div className="inline-flex items-center space-x-2 text-[11px] text-gray-500">
             <ShieldCheck className="w-3.5 h-3.5 text-green-400" />
-            <span>100% Tested Redeem Codes & Verified Weapon Data</span>
+            <span>Redeem Codes & Weapon Data</span>
           </div>
         </div>
 

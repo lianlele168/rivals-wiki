@@ -20,7 +20,7 @@ export default function WeaponsClient() {
       <div className="border-b border-red-900/30 pb-6">
         <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-800/50 text-emerald-300 text-xs font-mono font-bold mb-3">
           <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-          <span>ALL {WEAPONS.length} WEAPON NAMES VERIFIED — SEPT 2026</span>
+          <span>ALL {WEAPONS.length} WEAPON NAMES SOURCED — SEPT 2026</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight font-mono">
           Rivals Weapons Database
@@ -73,7 +73,7 @@ export default function WeaponsClient() {
             <p className="text-xs text-gray-400 leading-relaxed">{w.description}</p>
             <div className="p-3 rounded-xl bg-slate-950/80 border border-slate-800">
               <div className="flex items-center gap-2 text-[10px] uppercase tracking-wider text-slate-500 font-mono mb-1">
-                <Crosshair className="w-3 h-3" /> Verified stats
+                <Crosshair className="w-3 h-3" /> Stats
               </div>
               <p className="text-xs text-gray-200 font-mono leading-relaxed">{w.stats}</p>
             </div>

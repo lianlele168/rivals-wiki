@@ -10,7 +10,7 @@ export default function TierListClient() {
       <div className="border-b border-red-900/30 pb-6">
         <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-800/50 text-emerald-300 text-xs font-mono font-bold mb-3">
           <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-          <span>REAL IN-GAME CLASSIFICATION — VERIFIED SEPT 2026</span>
+          <span>REAL IN-GAME CLASSIFICATION — SOURCED SEPT 2026</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight font-mono">
           Rivals Weapon Quality Guide
